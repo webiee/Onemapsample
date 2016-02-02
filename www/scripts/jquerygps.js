@@ -34,7 +34,7 @@ var mapInit = function(){
 
             // Create map
             var map = new Map("mapDiv",{
-                basemap: "topo",
+                basemap: "streets",
                 center: [-98.58, 39.82],
                 zoom: 3
             });
