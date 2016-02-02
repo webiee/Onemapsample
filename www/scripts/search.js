@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 require([
 
         "esri/map",
@@ -17,3 +18,4 @@ require([
          search.startup();
 
       });
+});
