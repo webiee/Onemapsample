@@ -1,4 +1,4 @@
-var app = {
+var newapp = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -48,4 +48,5 @@ var mapInit = function(){
     
 
 };
-app.initialize();
+alert('hello');
+newapp.initialize();
