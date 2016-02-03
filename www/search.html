@@ -117,12 +117,7 @@ html {
 }
 
 .main-content #sidebar-toggle .bar:last-child { margin-bottom: 0; }
-    #map {
-         height: 100vh;
-        
-         margin: 0;
-         padding: 0;
-      }
+    
       #search {
        
       position: absolute;
@@ -139,9 +134,7 @@ html {
     <link rel="stylesheet" href="css/themes/jquery.mobile.structure-1.4.5.min.css" />
     <link rel="stylesheet" href="css/jquery.css">
 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no"/>
-    <title>Basic Map</title>
+ 
 	<link rel="stylesheet" href="scripts/esri/edijit/themes/claro/claro.css">
    <link rel="stylesheet" href="scripts/esri/esri/css/esri.css">
     <link rel="stylesheet" href="css/basic.css">
@@ -168,8 +161,8 @@ html {
           <div class="swipe-area"></div>
           <a href="#" data-toggle=".container" id="sidebar-toggle"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </a>
 			
-          <div class="content">
-         <div id="search"></div>
+          <div class="content" style="height:100px;">
+         <div id="search" style="margin-top:20px;"></div>
    <div id="map" style="height:100%;"></div>
           </div>
         </div>

@@ -48,5 +48,5 @@ var mapInit = function(){
     
 
 };
-alert('hello');
+
 newapp.initialize();
