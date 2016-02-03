@@ -117,6 +117,20 @@ html {
 }
 
 .main-content #sidebar-toggle .bar:last-child { margin-bottom: 0; }
+    #map {
+         height: 100%;
+        
+         margin: 0;
+         padding: 0;
+      }
+      #search {
+       
+         top: 18px;
+        position:absolute;
+		left:20px;
+		
+      }
+.content{position:relative;}
 </style>
  <link rel="stylesheet" href="css/themes/black2.min.css"/>
     <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css"/>
@@ -151,8 +165,10 @@ html {
 <div class="main-content">
           <div class="swipe-area"></div>
           <a href="#" data-toggle=".container" id="sidebar-toggle"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </a>
+			
           <div class="content">
-         search
+         <div id="search"></div>
+   <div id="map"></div>
           </div>
         </div>
       </div>
@@ -180,7 +196,7 @@ html {
       });
 </script>
 <script src="scripts/jQueryHelper.js"></script>
- <script src="scripts/jquerygps.js"></script>
+ <script src="scripts/search.js"></script>
 <script src="cordova.js"></script>
 </body>
 </html>
