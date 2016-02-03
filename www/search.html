@@ -16,7 +16,7 @@ html {
   font-weight: 100;
 }
 
-.newcontainer {
+.container {
   position: relative;
   height: 100%;
   width: 100%;
@@ -28,7 +28,7 @@ html {
   transition: left 0.4s ease-in-out;
 }
 
-.newcontainer.open-sidebar { left: 240px; }
+.container.open-sidebar { left: 240px; }
 
 .swipe-area {
   position: absolute;
@@ -37,7 +37,7 @@ html {
   top: 0;
   height: 100%;
   background:url(images/jeans-bg.png);
-  z-index: 999;
+  z-index: 0;
 }
 
 #sidebar {
@@ -148,7 +148,7 @@ html {
       </head>
 
 <body>
-   <div class="newcontainer">
+   <div class="container">
  <div id="sidebar">
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -159,10 +159,10 @@ html {
     
 <div class="main-content">
           <div class="swipe-area"></div>
-          <a href="#" data-toggle=".newcontainer" id="sidebar-toggle"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </a>
+          <a href="#" data-toggle=".container" id="sidebar-toggle"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </a>
 			
           <div class="content" style="height:100%;">
-         ggggggfggg
+         fhghggggggg
           </div>
         </div>
       </div>
@@ -171,7 +171,6 @@ html {
       <script>
   $(window).load(function(){
         $("[data-toggle]").click(function() {
-        	alert('hi');
           var toggle_el = $(this).data("toggle");
           $(toggle_el).toggleClass("open-sidebar");
         });
@@ -179,11 +178,11 @@ html {
               swipeStatus:function(event, phase, direction, distance, duration, fingers)
                   {
                       if (phase=="move" && direction =="right") {
-                           $(".newcontainer").addClass("open-sidebar");
+                           $(".container").addClass("open-sidebar");
                            return false;
                       }
                       if (phase=="move" && direction =="left") {
-                           $(".newcontainer").removeClass("open-sidebar");
+                           $(".container").removeClass("open-sidebar");
                            return false;
                       }
                   }
