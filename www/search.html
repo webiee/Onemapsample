@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Touch Swipeable Sidebar Menu Demo</title>
-      <style>
+ <style>
 body,
 html {
   height: 100%;
@@ -17,7 +17,7 @@ html {
 }
 
 .container {
- 
+  position: relative;
   height: 100%;
   width: 100%;
   left: 0;
@@ -36,7 +36,7 @@ html {
   left: 0;
   top: 0;
   height: 100%;
-  background:url(images/jeans-bg.png);
+  background: #f3f3f3;
   z-index: 0;
 }
 
@@ -78,17 +78,18 @@ html {
 .main-content {
   width: 100%;
   height: 100%;
-  padding: 0px;
+  padding: 0;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  
+  position: relative;
 }
 
 .main-content .content {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  padding-left: 60px;
+  padding-left: 50px;
   width: 100%;
+  height:100%;
 }
 
 .main-content .content h1 { font-weight: 100; }
@@ -104,7 +105,8 @@ html {
   display: block;
   position: relative;
   padding: 10px 7px;
-  float: left; margin:8px;
+  float: left;
+      margin: 8px;
 }
 
 .main-content #sidebar-toggle .bar {
@@ -117,17 +119,7 @@ html {
 }
 
 .main-content #sidebar-toggle .bar:last-child { margin-bottom: 0; }
-    
-      #search {
-       
-      position: absolute !important;
-    z-index: 2 !important;
-    top: 20px !important;
-    left: 50px !important;
-		
-      }
 
-#search{margin-top:20px;}
 </style>
  <link rel="stylesheet" href="css/themes/black2.min.css"/>
     <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css"/>
@@ -145,25 +137,40 @@ html {
 
     <script async src="scripts/jquery-2.1.3.min.js"></script>
     <script async src="scripts/jquery.mobile-1.4.5.min.js"></script>
+	 <style>
+      html,
+      body,
+      #map {
+         height: 100%;
+         width: 100%;
+         margin: 0;
+         padding: 0;
+      }
+      #search {
+         display: block;
+         position: absolute;
+         z-index: 2;
+         top: 20px;
+         margin-left: 60px
+      }
+   </style>
       </head>
 
 <body>
-   <div class="container">
- <div id="sidebar">
+<div class="container">
+        <div id="sidebar">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="search.html">Search</a></li>
             
           </ul>
         </div>
-    
-<div class="main-content">
+        <div class="main-content">
           <div class="swipe-area"></div>
           <a href="#" data-toggle=".container" id="sidebar-toggle"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </a>
-			
-          <div class="content" style="height:100%;margin-left:-10px;">
-         <div id="search" style="position: absolute !important;"></div>
-   <div id="map" style="height: 100%;margin-top:-5px;" ></div>
+          <div class="content">
+         <div id="search"></div>
+          <div id="map"></div>
           </div>
         </div>
       </div>
