@@ -206,28 +206,7 @@ function newfun()
           }); 
       	}
       </script>
-  <script>
-   require([
-
-        "esri/map",
-        "esri/dijit/Search",
-        "dojo/domReady!"
-
-      ], function (Map, Search) {
-         var map = new Map("map", {
-            basemap: "streets",
-            center: [-120.435, 46.159], // lon, lat
-            zoom: 7
-         });
-
-         var search = new Search({
-            map: map
-         }, "search");
-        // alert("test search");
-         search.startup();
-
-      });
-  </script>
+ 
 <script src="scripts/jQueryHelper.js"></script>
  <script src="scripts/search.js"></script>
 <script src="cordova.js"></script>
