@@ -119,6 +119,8 @@ html {
 }
 
 .main-content #sidebar-toggle .bar:last-child { margin-bottom: 0; }
+svg[Attributes Style] {height:100px !important;}
+
 
 </style>
 <script>
@@ -150,14 +152,14 @@ document.addEventListener("deviceready", onDeviceReady, false);
          height: 100%;
          width: 100%;
          margin: 0;
-         padding: 0;
+         padding: 0; position:relative;
       }
       #search {
          display: block;
          position: absolute;
          z-index: 2;
-         top: 20px;
-         margin-left: 60px
+         top: 0px;
+         margin-left: 50px
       }
    </style>
    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
