@@ -167,7 +167,7 @@ html {
         </div>
         <div class="main-content">
           <div class="swipe-area"></div>
-          <a href="#" data-toggle=".container" id="sidebar-toggle"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </a>
+          <a href="#" data-toggle=".container" id="sidebar-toggle" onclick="togglef()"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </a>
           <div class="content">
          <div id="search"></div>
           <div id="map"></div>
@@ -177,10 +177,10 @@ html {
       <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script> 
       <script>
-      	$('#sidebar-toggle').click(function()
+      function togglef()
       	{
       		alert('hello');
-      	});
+      	}
       </script>
       <script>
   $(window).load(function(){
