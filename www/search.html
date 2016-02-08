@@ -160,9 +160,26 @@ document.addEventListener("deviceready", onDeviceReady, false);
          margin-left: 60px
       }
    </style>
+   <script src="cordova.js" charset="utf-8"></script>
+   <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+    	alert("hello");
+        // Now safe to use device APIs
+    }
+
+    </script>
       </head>
 
-<body onLoad="bodyfun()">
+<body onLoad="onLoad()">
 <div class="container">
         <div id="sidebar">
           <ul>
@@ -209,6 +226,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
  
 <script src="scripts/jQueryHelper.js"></script>
  <script src="scripts/search.js"></script>
-<script src="cordova.js"></script>
+
 </body>
 </html>
