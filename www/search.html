@@ -156,7 +156,7 @@ html {
    </style>
       </head>
 
-<body>
+<body onload="testfun()">
 <div class="container">
         <div id="sidebar">
           <ul>
@@ -199,7 +199,13 @@ html {
           }); 
       	}
       </script>
-  
+  <script>
+  	function testfun()
+  	{
+  		alert("testsearch");
+  		
+  	}
+  </script>
 <script src="scripts/jQueryHelper.js"></script>
  <script src="scripts/search.js"></script>
 <script src="cordova.js"></script>
