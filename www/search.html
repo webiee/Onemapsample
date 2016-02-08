@@ -180,10 +180,10 @@ html {
       function togglef()
       	{
       		alert("search");
-      	   $("[data-toggle]").click(function() {
-          var toggle_el = $(this).data("toggle");
+      	 
+          var toggle_el = $("#sidebar-toggle").data("toggle");
           $(toggle_el).toggleClass("open-sidebar");
-        });
+      
          $(".swipe-area").swipe({
               swipeStatus:function(event, phase, direction, distance, duration, fingers)
                   {
