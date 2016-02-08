@@ -121,6 +121,12 @@ html {
 .main-content #sidebar-toggle .bar:last-child { margin-bottom: 0; }
 
 </style>
+<script>
+function newfun()
+{
+	alert("hello");
+}
+</script>
  <link rel="stylesheet" href="css/themes/black2.min.css"/>
     <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css"/>
     <link rel="stylesheet" href="css/themes/jquery.mobile.structure-1.4.5.min.css" />
@@ -177,9 +183,10 @@ html {
       <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script> 
       <script>
+      newfun();
       function togglef()
       	{
-      		alert("search");
+      		//alert("search");
       	 
           var toggle_el = $("#sidebar-toggle").data("toggle");
           $(toggle_el).toggleClass("open-sidebar");
@@ -200,11 +207,26 @@ html {
       	}
       </script>
   <script>
-  	function testfun()
-  	{
-  		alert("testsearch");
-  		
-  	}
+   require([
+
+        "esri/map",
+        "esri/dijit/Search",
+        "dojo/domReady!"
+
+      ], function (Map, Search) {
+         var map = new Map("map", {
+            basemap: "streets",
+            center: [-120.435, 46.159], // lon, lat
+            zoom: 7
+         });
+
+         var search = new Search({
+            map: map
+         }, "search");
+        // alert("test search");
+         search.startup();
+
+      });
   </script>
 <script src="scripts/jQueryHelper.js"></script>
  <script src="scripts/search.js"></script>
