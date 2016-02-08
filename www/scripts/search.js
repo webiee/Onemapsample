@@ -42,6 +42,7 @@ var mapInit = function(){
          var search = new Search({
             map: map
          }, "search");
+         alert("test search");
          search.startup();
 
       });
